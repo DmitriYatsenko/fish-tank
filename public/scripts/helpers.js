@@ -1,4 +1,3 @@
-
 function randRange(min, max) {
   var interval = max - min;
   return Math.random() * interval + min;
@@ -64,4 +63,3 @@ class Vector {
     this.scale_mut(scale_factor);
   }*/
 }
-

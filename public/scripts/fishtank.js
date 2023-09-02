@@ -1,4 +1,3 @@
-
 class Fishtank {
   constructor(divName) {
     this.divName = divName;
@@ -79,14 +78,14 @@ class Fishtank {
     this.runPhysics();  // TODO: maybe this should be on a separate setInterval
     var $fishtank = $('#' + this.divName);
     var centerX = Math.floor(window.innerWidth / 2);
-    var floorY  = Math.floor(window.innerHeight * 0.95);
+    var floorY = Math.floor(window.innerHeight * 0.95);
     for (var id in this.denizens) {
       var denizen = this.denizens[id];
       var renderRules = denizen.renderRules();
       var $denizen = $('#' + id);
       if ($denizen.length === 0) {
         $denizen = $(`<img id="${id}"></img>`);
-        $denizen.css({position: 'fixed'});
+        $denizen.css({ position: 'fixed' });
         $denizen.click(denizen.onClick);
         $fishtank.append($denizen);
       }
@@ -119,4 +118,3 @@ class Fishtank {
   }
 
 }
-
